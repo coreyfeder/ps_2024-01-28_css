@@ -8,14 +8,15 @@ will overwrite earlier assignments.
 I wonder if the declaration order changes the effects? (i.e., is it always
 the order the declarations appear in the stylesheet, or does the order 
 properties are assigned to the element matter?
-style.css:
-.bg-blue { background-color: blue }
-.bg-green { background-color: green }
-html:
-<div class="class1 class2"`>This background will be green.</div>
-<div class="class2 class1"`>This background will be ...</div>
 */
 
 .bg-blue { background-color: blue }
 
 .bg-green { background-color: green }
+
+.spacer {
+    width: 100%;
+    border: hidden;
+    background: none;
+    height: 0.5em;
+}

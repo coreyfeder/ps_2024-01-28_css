@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Specificity and Conflict</title>
 </head>
 <body>
-    <div class="bg-blue bg-green"`>This background will be green.</div>
-    <div class="bg-green bg-blue"`>This background will be ...blue?</div>
+    <div class="bg-blue"><code>bg-blue</code></div>
+    <div class="bg-green"><code>bg-green</code></div>
+    <div class="spacer"></div>
+    <div class="bg-blue bg-green"><code>bg-green</code> then <code>bg-blue</code></div>
+    <div class="bg-green bg-blue"><code>bg-blue</code> then <code>bg-green</code></div>
 </body>
 </html>
