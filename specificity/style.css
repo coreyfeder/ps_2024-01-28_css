@@ -1,0 +1,21 @@
+/* 
+What about conflicts?
+There is a whole system of prioritizing: SPECIFICITY.
+See https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
+(remember the CN-22 form you built.)
+But in equal cases, they'll be evaluated sequentially; later assignments 
+will overwrite earlier assignments.
+I wonder if the declaration order changes the effects? (i.e., is it always
+the order the declarations appear in the stylesheet, or does the order 
+properties are assigned to the element matter?
+style.css:
+.bg-blue { background-color: blue }
+.bg-green { background-color: green }
+html:
+<div class="class1 class2"`>This background will be green.</div>
+<div class="class2 class1"`>This background will be ...</div>
+*/
+
+.bg-blue { background-color: blue }
+
+.bg-green { background-color: green }
