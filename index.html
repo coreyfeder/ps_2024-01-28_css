@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Emmet Toolkit</title>
+</head>
+<body>
+    <h1>Emmet Toolkit</h1>
+    <p>Whoever you are, Emmet: <strong>thank you</strong>.</p>
+
+    <!-- id = # -->
+    <div id="name">`div#`</div>
+    <!-- class = . -->
+    <div class="classname">`div.`</div>
+    <!-- child = > -->
+    <div>
+        <p>`div>p`</p>
+    </div>
+    <!-- make siblings = + -->
+    <!-- `span+span` -->
+    <span></span><span></span>
+    <!-- multiple elements = * -->
+    <!-- 'div>ul>li*3' -->
+    <div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <!-- put stuff all together -->
+    <code>div#wrapper>div#content>h1{TITLE}+ul>li.item{item}*3</code>
+    <div id="wrapper">
+        <div id="content">
+            <h1>TITLE</h1>
+            <ul>
+                <li class="item">item</li>
+                <li class="item">item</li>
+                <li class="item">item</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ignore the word "div", it's the default! -->
+    <code>#wrapper>#content>h1{TITLE}+ul>li.item{item}*3</code>
+    <div id="wrapper">
+        <div id="content">
+            <h1>TITLE</h1>
+            <ul>
+                <li class="item">item</li>
+                <li class="item">item</li>
+                <li class="item">item</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- put the multiplier in a different place! -->
+    <code>#wrapper>#content>h1{TITLE}+ul>li*3.item{item}</code>
+    <div id="wrapper">
+        <div id="content">
+            <h1>TITLE</h1>
+            <ul>
+                <li class="item">item</li>
+                <li class="item">item</li>
+                <li class="item">item</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Okay, it's not strictly Emmet, but I need to find or make a way to wrap selected text in a tag. -->
+    <p>For example, turn this into <strong>this</strong>.</p>
+    <p>VSCode command: <code>Command Pallete</code> &gt; <code>Emmet: Wrap with Abbreviation</code></p>
+    I made a keybinding to <code>Emmet: Wrap with Abbreviation</code>: <strong>Cmd-m!</strong>
+
+
+</body>
+</html>
