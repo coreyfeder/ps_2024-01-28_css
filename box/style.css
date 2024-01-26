@@ -2,16 +2,44 @@
 element {
     property: value;
 }
- */
+*/
+
+/* 
+What about conflicts?
+There is a whole system of prioritizing: SPECIFICITY.
+See https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
+(remember the CN-22 form you built.)
+But in equal cases, they'll be evaluated sequentially; later assignments will overwrite earlier assignments.
+*/
+
 
 body {
     background-color: powderblue;
 }
 
-#box {
+div {
     border: 1px solid black;
+    background-color: blueviolet;
+}
+
+#box {
     padding: 0px;
     margin: 40px;
     width: min-content;
     text-wrap: nowrap;
+}
+
+#box2 {
+    border: 10px;
+    background-color: orange;
+    border-color: brown;
+}
+
+#box3 {
+    background-color: yellowgreen;
+    border-color: olive;
+}
+
+#box2, .box3 {
+    border: 3px dotted;
 }
